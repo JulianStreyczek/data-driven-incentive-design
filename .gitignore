@@ -1,6 +1,8 @@
 .idea
 data/raw/*
 /*.md
+!/README.md
+!/AGENTS.md
 
 .DS_Store
 .codex_deps/
