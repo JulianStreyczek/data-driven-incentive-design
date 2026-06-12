@@ -6,7 +6,7 @@
 
 This GitHub repo is intended to show how user data, causal inference, and optimization can be combined to design an incentive scheme. The example uses public taxi trip data from San Francisco and designs a simple tiered rewards scheme to increase the number of trips completed by drivers.
 
-The Jupyter notebook proceeds as follows. First, it loads and cleans the data. Second, it estimates individual labor supply, i.e. how drivers adjust the number of trips they provide when revenue per trip changes, using a leave-one-out instrument for causal identification. Third, it explains how to use this estimate in a tiered incentive scheme. Fourth, for a given reward structure, it uses a back-of-the-envelope simulation to estimate how many additional trips would be completed, along with the expected cost. Finally, it applies a simple optimization over potential reward levels to find the best design under a predefined budget.
+The [Jupyter notebook](code/taxi_incentive_design.ipynb) proceeds as follows. First, it loads and cleans the data. Second, it estimates individual labor supply, i.e. how drivers adjust the number of trips they provide when revenue per trip changes, using a leave-one-out instrument for causal identification. Third, it explains how to use this estimate in a tiered incentive scheme. Fourth, for a given reward structure, it uses a back-of-the-envelope simulation to estimate how many additional trips would be completed, along with the expected cost. Finally, it applies a simple optimization over potential reward levels to find the best design under a predefined budget.
 
 The goal is not to claim that the result is the final optimal policy, but to demonstrate a practical data science workflow for solving a real-world business objective.
 
@@ -17,7 +17,7 @@ The goal is not to claim that the result is the final optimal policy, but to dem
 3. Tiered Incentive Scheme
 4. Optimization
 
-Main code:`notebooks/taxi_incentive.design.ipynb` or `notebooks/taxi_incentive_design.py`
+Main code: [notebook](code/taxi_incentive_design.ipynb) or [Python script](code/taxi_incentive_design.py).
 
 ## Data
 
@@ -47,13 +47,13 @@ Raw data is not committed to this repo.
 
 ### 3. Run the code
 
-Run `notebooks/taxi_incentive_design.ipynb` for the notebook or `notebooks/taxi_incentive_design.py` for the raw Python script. The IV calculation is a bit costly due to the high-dimensional fixed effects, and can take 1-3 minutes.
+Run [code/taxi_incentive_design.ipynb](code/taxi_incentive_design.ipynb) for the notebook or [code/taxi_incentive_design.py](code/taxi_incentive_design.py) for the raw Python script. The IV calculation is a bit costly due to the high-dimensional fixed effects, and can take 1-3 minutes.
 
 ## File Structure
 
 ```text
 .
-├── notebooks/   # main analysis notebook
+├── code/        # main analysis notebook and Python script
 ├── outputs/     # generated figures and summary CSVs
 ├── data/        # data (raw DataSF CSVs are ignored by Git)
 ├── docs/        # methodology notes
