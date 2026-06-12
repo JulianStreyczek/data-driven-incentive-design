@@ -17,16 +17,11 @@ The goal is not to claim that the result is the final optimal policy, but to dem
 3. Tiered Incentive Scheme
 4. Optimization
 
-Main notebook:
-
-- `notebooks/taxi_incentive.design.ipynb`
+Main code:`notebooks/taxi_incentive.design.ipynb` or `notebooks/taxi_incentive_design.py`
 
 ## Data
 
-Source: DataSF Taxi Trips
-
-- Dataset page: https://data.sfgov.org/Transportation/Taxi-Trips/m8hk-2ipk
-- API endpoint: https://data.sfgov.org/resource/m8hk-2ipk.csv
+Source: DataSF Taxi Trips, https://data.sfgov.org/Transportation/Taxi-Trips/m8hk-2ipk
 
 The local run expects monthly CSV files in `data/raw/`. Raw data is intentionally ignored by Git.
 
