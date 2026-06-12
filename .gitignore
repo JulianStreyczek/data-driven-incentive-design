@@ -1,0 +1,7 @@
+data/raw/*
+/*.md
+
+.DS_Store
+.codex_deps/
+__pycache__/
+.ipynb_checkpoints/
