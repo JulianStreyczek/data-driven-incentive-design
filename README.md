@@ -19,7 +19,7 @@ The goal is not to claim that the result is the final optimal policy, but to dem
 
 Main notebook:
 
-- `notebooks/taxi_supply_elasticity_public_data.ipynb`
+- `notebooks/taxi_incentive.design.ipynb`
 
 ## Data
 
@@ -50,9 +50,9 @@ data/raw/sf_taxi_trips_2024_05.csv
 
 Raw data is not committed to this repo.
 
-### 3. Run the notebook
+### 3. Run the code
 
-Run `notebooks/taxi_supply_elasticity_public_data.ipynb`. The IV calculation is a bit costly due to the high-dimensional fixed effects, and can take 1-3 minutes.
+Run `notebooks/taxi_incentive_design.ipynb` for the notebook or `notebooks/taxi_incentive_design.py` for the raw Python script. The IV calculation is a bit costly due to the high-dimensional fixed effects, and can take 1-3 minutes.
 
 ## File Structure
 
