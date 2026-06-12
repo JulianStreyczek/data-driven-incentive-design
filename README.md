@@ -6,7 +6,7 @@
 
 This GitHub repo is intended to show how user data, causal inference, and optimization can be combined to design an incentive scheme. The example uses public taxi trip data from San Francisco and designs a simple tiered rewards scheme to increase the number of trips completed by drivers.
 
-The project is notebook-first. First, the notebook loads and cleans the data. Second, it estimates individual labor supply, i.e. how drivers adjust the number of trips they provide when revenue per trip changes, using a leave-one-out instrument for causal identification. Third, it explains how to use this estimate in a tiered incentive scheme. Fourth, for a given reward structure, it uses a back-of-the-envelope simulation to estimate how many additional trips would be completed, along with the expected cost. Finally, it applies a simple optimization over potential reward levels to find the best design under a predefined budget.
+The Jupyter notebook proceeds as follows. First, it loads and cleans the data. Second, it estimates individual labor supply, i.e. how drivers adjust the number of trips they provide when revenue per trip changes, using a leave-one-out instrument for causal identification. Third, it explains how to use this estimate in a tiered incentive scheme. Fourth, for a given reward structure, it uses a back-of-the-envelope simulation to estimate how many additional trips would be completed, along with the expected cost. Finally, it applies a simple optimization over potential reward levels to find the best design under a predefined budget.
 
 The goal is not to claim that the result is the final optimal policy, but to demonstrate a practical data science workflow for solving a real-world business objective.
 
@@ -40,9 +40,11 @@ python -m pip install -r requirements.txt
 
 ### 2. Add the raw data
 
-Download monthly CSV files from the DataSF Taxi Trips dataset and place them in `data/raw/`:
+Download monthly CSV files from the DataSF Taxi Trips dataset and place them in `data/raw/`. The checked-in outputs were generated from December 2022 through May 2024, with files named like:
 
 ```text
+data/raw/sf_taxi_trips_2022_12.csv
+...
 data/raw/sf_taxi_trips_2024_05.csv
 ```
 
@@ -67,13 +69,9 @@ Run `notebooks/taxi_supply_elasticity_public_data.ipynb`. The IV calculation is 
 
 ## Outputs
 
-Generated artifacts are written to `outputs/`:
+Figures and summary CSVs are written to `outputs/`:
 
 - `01_driver_distributions.svg`
 - `02_active_days_distribution.svg`
 - `03_binscatter_functional_form.svg`
 - `04_optimized_trip_tier_simulation.svg`
-- `driver_day_model_summary.csv`
-- `incentive_simulation_summary.csv`
-- `incentive_optimization_results.csv`
-- `incentive_optimization_best_design.csv`
