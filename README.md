@@ -72,6 +72,8 @@ Generated artifacts are written to `outputs/`:
 - `01_driver_distributions.svg`
 - `02_active_days_distribution.svg`
 - `03_binscatter_functional_form.svg`
-- `04_trip_tier_simulation.svg`
+- `04_optimized_trip_tier_simulation.svg`
 - `driver_day_model_summary.csv`
 - `incentive_simulation_summary.csv`
+- `incentive_optimization_results.csv`
+- `incentive_optimization_best_design.csv`

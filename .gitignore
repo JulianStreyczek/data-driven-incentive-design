@@ -5,6 +5,7 @@ data/raw/*
 !/AGENTS.md
 
 .DS_Store
+.mplconfig/
 .codex_deps/
 __pycache__/
 .ipynb_checkpoints/
