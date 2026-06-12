@@ -4,9 +4,9 @@
 
 #### Julian Streyczek, June 2026
 
-This GitHub repo is intended to show how user data, causal inference, and optimization can be combined to design an incentive scheme. The example uses public taxi trip data from San Francisco and designs a simple tiered rewards scheme to increase the number of trips completed by drivers.
+This case study is intended to show how user data, causal inference, and optimization can be combined to design a user incentive scheme. I use public taxi trip data from San Francisco and design a simple tiered rewards scheme to increase the number of trips completed by drivers.
 
-The [Jupyter notebook](code/taxi_incentive_design.ipynb) proceeds as follows. First, it loads and cleans the data. Second, it estimates individual labor supply, i.e. how drivers adjust the number of trips they provide when revenue per trip changes, using a leave-one-out instrument for causal identification. Third, it explains how to use this estimate in a tiered incentive scheme. Fourth, for a given reward structure, it uses a back-of-the-envelope simulation to estimate how many additional trips would be completed, along with the expected cost. Finally, it applies a simple optimization over potential reward levels to find the best design under a predefined budget.
+The [Jupyter notebook](code/taxi_incentive_design.ipynb) contains both the code and explanations. First, we load, clean, and show descriptives for the data. Second, we estimate individual labor supply, i.e. how drivers adjust the number of trips they provide when revenue per trip changes, using a leave-one-out instrument for causal identification. Third, we introduce a simple incentive scheme that provides cash rewards upon completing a certain number of trips, and use our labor supply estimates in a back-of-envelope simulation to estimate the effect on additional trips, along with the expected cost. Finally, we run an optimization loop over potential reward tiers and levels to find the most effective design under a pre-defined budget constraint.
 
 The goal is not to claim that the result is the final optimal policy, but to demonstrate a practical data science workflow for solving a real-world business objective.
 
